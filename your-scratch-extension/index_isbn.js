@@ -6,10 +6,6 @@ class Scratch3YourExtension {
 
     constructor (runtime) {
         // put any setup for your extension here
-        import ('syllable')
-        .then((syllableModule) => {
-            this.syllable = syllableModule.syllable
-        })
     }
 
     /**
@@ -21,7 +17,7 @@ class Scratch3YourExtension {
             id: 'yourScratchExtension',
 
             // name that will be displayed in the Scratch UI
-            name: 'Syllable',
+            name: 'Demo',
 
             // colours to use for your extension blocks
             color1: '#000099',
@@ -64,18 +60,6 @@ class Scratch3YourExtension {
                             type: ArgumentType.NUMBER
                         }
                     }
-                },
-                {
-                    opcode: 'syllableBlock',
-                    blockType: BlockType.REPORTER,
-                    text: 'Syllables in [MY_TEXT]',
-                    terminal: false,
-                    arguments:{
-                        MY_TEXT:{
-                            defaultValue: 'Hello World',
-                            type: ArgumentType.STRING
-                        }
-                    }
                 }
             ]
         };
@@ -101,10 +85,6 @@ class Scratch3YourExtension {
                 return bookinfo.title
             })
 
-    }
-
-    syllableBlock ({MY_TEXT}){
-        return this.syllable(MY_TEXT);
     }
 }
 
