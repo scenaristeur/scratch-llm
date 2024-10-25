@@ -72,7 +72,7 @@ class Scratch3YourExtension {
      */
     myFirstBlock ({ BOOK_NUMBER}) {
         // example implementation to return a string
-        return fetch('https://openlibrary.org.isbn/' + BOOK_NUMBER + '.json')
+        return fetch('https://openlibrary.org/isbn/' + BOOK_NUMBER + '.json')
             .then((response) => {
                 if (response.ok) {
                     return response.json()
